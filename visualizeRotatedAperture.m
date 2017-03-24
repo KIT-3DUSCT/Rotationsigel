@@ -69,9 +69,8 @@ for i=1:size(profile,1)
 end
 title(sprintf('Rotationsigel %d MPs',size(profile,1)));
 
-
-%%%exctact center!
-
+if 0
+%%%exact center!
 dist=sqrt(sum(TASElements(1).receiverPositions(:,1:2).^2,2)); %bottom one
 
 centerPos=zeros(size(TASElements,2),size(TASElements(1).receiverPositions,1),3);
@@ -81,5 +80,9 @@ end
 centerPos=reshape(centerPos,[size(TASElements(1).receiverPositions,1)*size(TASElements,2) 3]);
 
 plot3(centerPos(:,1),centerPos(:,2),centerPos(:,3),'x')
+end
+
 disp('done');
+
+
 end
